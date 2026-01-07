@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SymBIoT Test Suite" verbose="2" thread-count="1" parallel="none">
+
+    <listeners>
+        <listener class-name="com.symbiot.listeners.TestListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Application Launch Tests">
+        <classes>
+            <class name="com.symbiot.tests.ApplicationLaunchTest"/>
+        </classes>
+    </test>
+
+    <test name="Login Tests">
+        <classes>
+            <class name="com.symbiot.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Logout Tests">
+        <classes>
+            <class name="com.symbiot.tests.LogoutTest"/>
+        </classes>
+    </test>
+
+    <test name="UI Validation Tests">
+        <classes>
+            <class name="com.symbiot.tests.UIValidationTest"/>
+        </classes>
+    </test>
+
+    <test name="Device Registration Tests">
+        <classes>
+            <class name="com.symbiot.tests.DeviceRegistrationTest"/>
+        </classes>
+    </test>
+
+</suite>

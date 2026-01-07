@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Product Defects",
+    "description": "Tests that found application bugs",
+    "matchedStatuses": ["failed"],
+    "traceRegex": ".*AssertionError.*"
+  },
+  {
+    "name": "Test Defects",
+    "description": "Tests with test code issues",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*NullPointerException.*|.*NoSuchElementException.*"
+  },
+  {
+    "name": "Timeout Issues",
+    "description": "Tests that failed due to timeout",
+    "matchedStatuses": ["broken", "failed"],
+    "traceRegex": ".*TimeoutException.*|.*timeout.*"
+  },
+  {
+    "name": "Element Not Found",
+    "description": "Tests failed because UI element was not found",
+    "matchedStatuses": ["broken", "failed"],
+    "traceRegex": ".*NoSuchElementException.*|.*Element not found.*|.*not found.*"
+  },
+  {
+    "name": "Known Issues",
+    "description": "Tests that are skipped due to known issues",
+    "matchedStatuses": ["skipped"],
+    "traceRegex": ".*known issue.*|.*skip.*"
+  },
+  {
+    "name": "Infrastructure Issues",
+    "description": "Tests failed due to infrastructure problems",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*Connection.*|.*network.*|.*WebDriverException.*"
+  }
+]
